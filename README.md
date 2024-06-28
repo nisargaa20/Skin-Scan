@@ -1,2 +1,2 @@
-# Skin Symp
+# Skin Scan
  

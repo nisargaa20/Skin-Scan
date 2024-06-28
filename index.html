@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,12 +32,9 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
+  <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo"><a href="/">Skin Scan</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="static/img/logo.png" alt="" class="img-fluid"></a>-->
-
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
@@ -57,14 +53,16 @@
       <div class="row justify-content-center">
         <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <h1>SKIN SCAN</h1>
-          <h2>The Future of Skin Lesion Diagnosis: AI-Enhanced Skin Scanning</h2>
-          <div><a href="#about" class="btn-get-started scrollto">Get Started</a></div> 
+          <h2>The Future of Skin Diagnosis: AI-Enhanced Skin Scanning</h2>
+          <div><a href="#about" class="btn-get-started scrollto">Get Started</a></div>
         </div>
         <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
           <img src="img/hero-img.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
+
+    <div class="wave"></div> <!-- Move this div inside the #hero section -->
 
   </section><!-- End Hero -->
 
@@ -81,7 +79,7 @@
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
             <h3>Improve Your Skin Health Today</h3>
             <p class="fst-italic" style="color: #f7ab97">
-              Our website uses an AI model to recognize and classify 8 different types of skin lesions and classify 3 different severities of burns, including those that are cancerous and precancerous. Breathe easy, with Skin Skan.
+              Our website employs an AI model to identify and categorize 8 distinct types of skin lesions and assess 3 levels of burn severity, including cancerous and precancerous conditions. Trust Skin Scan for peace of mind.
             </p>
             <ul>
               <li><i class="bi bi-check-circle"></i> Quick</li>
@@ -89,10 +87,10 @@
               <li><i class="bi bi-check-circle"></i> Simple</li>
               <li><i class="bi bi-check-circle"></i> Immediate Advice</li>
             </ul>
-            <form class="input-form" action="/upload" method="post" enctype=multipart/form-data>
-              <input id="upload" type="file" class="form-control border-0" name="image"></i>
+            <form class="input-form" action="/upload" method="post" enctype="multipart/form-data">
+              <input id="upload" type="file" class="form-control border-0" name="image">
               <p>  </p>
-              <input style="background-color:#ffaca7; color: #fff7f6" class="btn btn-orange btn-rounded-corner" class="icon-on-button" class="ion-ios-arrow-thin-right" type = "submit" value = "UPLOAD" /></i>
+              <input style="background-color:#ffaca7; color: #fff7f6" class="btn btn-orange btn-rounded-corner" class="icon-on-button" class="ion-ios-arrow-thin-right" type="submit" value="UPLOAD">
             </form>
           </div>
         </div>
@@ -101,8 +99,6 @@
     </section><!-- End About Section -->
 
   </main><!-- End #main -->
-
-  
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>

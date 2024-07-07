@@ -1,3 +1,5 @@
+//Install Qt framework: Qt Downloads
+
 #include <QApplication>
 #include "login.h"
 

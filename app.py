@@ -1,14 +1,11 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 import numpy as np
 from fastai.vision import *
 import pickle 
 import io
-from fastai.text import *
 import os
-from fastai import learner
 from fastai.vision.all import *
 import PIL
-import torchvision.transforms as T
 import requests
 
 cwd = os.getcwd()
@@ -16,7 +13,9 @@ path= cwd
 
 app = Flask(__name__)
 
+print("Starting the application...")
 model = load_learner("all.pkl", cpu=True, pickle_module=pickle)
+print("Model loaded successfully")
 
 @app.route('/')
 def form():
@@ -35,14 +34,16 @@ def upload():
         file.save('facebook.jpg')
 
         # Prediction using model
+        print("Predicting...")
         prediction = model.predict('facebook.jpg')[0]
+        print(f"Prediction: {prediction}")
+        
         rec = ""
         rec2 = ""
         rec3 = ""
         rec4 = ""
         rec5 = ""
         sources = "static/img/"
-
         if prediction == "actinic keratosis":
             rec = """Actinic keratosis is a precancerous skin condition that is caused by long-term sun exposure. 
             It is characterized by rough, scaly patches or bumps that develop on sun-exposed areas of the skin, 

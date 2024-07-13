@@ -658,3 +658,100 @@ section {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.mobilenet-demo-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.input-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.input-button:hover {
+  background-color: #4cae4c;
+}
+
+.demo-output {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.out-box {
+  text-align: center;
+  margin: 0 10px;
+}
+
+#test-image {
+  max-width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: auto;
+  margin: 2px;
+  border: 1px solid #130e0e; /* Optional: adds a border around the image */
+}
+
+#predict-box {
+  margin-left: 20px; /* Adds space between image and prediction box */
+  text-align: left;
+}
+
+#prediction {
+  font-size: 18px;
+  color: black;
+}
+
+/* Style for the chart container */
+.chart {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Increased maximum width for larger chart */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for the canvas element */
+#chart-box {
+  width: 100% !important; /* Ensure canvas takes full width */
+  height: 900px; /* Increased height for larger chart */
+  background-color: #000000; /* Black background for better visibility */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better focus */
+}
+
+/* Style for chart labels and text */
+.chart .chart-title {
+  font-size: 24px; /* Increased font size for better readability */
+  color: rgb(255, 255, 255); /* White text color for contrast */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.chart .chart-legend {
+  font-size: 18px; /* Increased font size for better readability */
+  color: rgb(255, 255, 255); /* White text color for contrast */
+}

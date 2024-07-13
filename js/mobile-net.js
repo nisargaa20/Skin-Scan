@@ -87,7 +87,7 @@ async function predButton() {
     return;
   }
   if (document.getElementById("predict-box").style.display === "none") {
-    alert("Please load an image using 'Demo Image' or 'Upload Image' button.");
+    alert("Please load an image using 'Upload Image' button.");
     return;
   }
 
@@ -160,6 +160,3 @@ function loadDemoImage() {
   document.getElementById("test-image").src = imgPath;
 }
 
-function closePredictBox() {
-  document.getElementById('predict-box').style.display = 'none';
-}

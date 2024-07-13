@@ -64,50 +64,70 @@ h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
+/* Preloader Styles */
 #preloader {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 9999; /* Ensure it’s on top of other elements */
   overflow: hidden;
-  background: #fcf9ea;
+  background: #d0b52f; /* Background color */
 }
 
 #preloader:before {
   content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
+  position: absolute; /* Center the loader */
+  top: 50%;
+  left: 50%;
   border: 6px solid #ff926b;
-  border-top-color: #e7e4fe;
+  border-top-color: #da7351;
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
+  transform: translate(-50%, -50%); /* Centering */
   animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes animate-preloader {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
+
+/* Back to Top Button Styles */
+.back-to-top {
+  position: fixed;
+  bottom: 20px; /* Position it at the bottom */
+  right: 20px; /* Position it on the right */
+  z-index: 9999; /* Ensure it's on top of other elements */
+  background: rgba(255, 146, 107, 0.8); /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 50%; /* Round shape */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px; /* Icon size */
+  text-align: center;
+}
+
+.back-to-top:hover {
+  background: #151718; /* Darker background on hover */
+}
+
+/* Ensure the icon is centered */
+.back-to-top i {
+  line-height: 1;
+}
+
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -436,11 +456,13 @@ h6 {
   height: 100vh;
   background: url("../img/hero-bg.jpg") center center no-repeat;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #hero .container,
 #hero .container-fluid {
-  padding-top: 84px;
+  padding-top: 50px;
 }
 
 #hero h1 {
@@ -604,7 +626,8 @@ section {
 # About
 --------------------------------------------------------------*/
 .about {
-  padding: 120px 0;
+  padding: 230px 0;
+  margin-top: 0; 
 }
 
 .about .content h3 {
@@ -683,15 +706,16 @@ body {
 .input-button {
   display: inline-block;
   margin: 10px;
+ 
   padding: 10px 20px;
-  background-color: #5cb85c;
+  background-color: #c76853;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .input-button:hover {
-  background-color: #4cae4c;
+  background-color: #0c160c;
 }
 
 .demo-output {
@@ -712,18 +736,7 @@ body {
   margin: 2px;
   border: 1px solid #130e0e;
 }
-#predict-box {
-  max-width: 600px; /* Increase max-width for a larger prediction box */
-  width: 100%; /* Allow the box to be responsive */
-  padding: 30px; /* Increase padding for more internal space */
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-  color: white; /* White text color for contrast */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better focus */
-  text-align: left; /* Align text to the left */
-  overflow-y: auto; /* Allow scrolling if content overflows */
-  display: none; /* Hide by default */
-}
+
 #predict-list {
   list-style-type: none; /* Remove bullet points */
   padding: 0; /* Remove default padding */
@@ -734,17 +747,6 @@ body {
   font-size: 20px; /* Increase font size for better readability */
 }
 
-/* Optional: Style for closing the prediction box */
-#predict-box button.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-}
 
 /* Style for the chart container */
 .chart {
@@ -759,7 +761,7 @@ body {
 #chart-box {
   width: 100% !important; /* Ensure canvas takes full width */
   height: 900px; /* Increased height for larger chart */
-  background-color: #000000; /* Black background for better visibility */
+  background-color: #353030; /* Black background for better visibility */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better focus */
 }

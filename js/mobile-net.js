@@ -159,3 +159,7 @@ function loadDemoImage() {
   const imgPath = "./assets/nv_samplepic.jpg";
   document.getElementById("test-image").src = imgPath;
 }
+
+function closePredictBox() {
+  document.getElementById('predict-box').style.display = 'none';
+}

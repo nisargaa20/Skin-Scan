@@ -695,7 +695,7 @@ body {
 }
 
 .demo-output {
-  display: flex;
+  display: flex; /* Use flexbox for horizontal layout */
   justify-content: center;
   align-items: flex-start;
   margin-top: 20px;
@@ -703,26 +703,47 @@ body {
 
 .out-box {
   text-align: center;
-  margin: 0 10px;
+  margin: 0 20px; /* Increase margin for more spacing */
 }
 
 #test-image {
   max-width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
   height: auto;
   margin: 2px;
-  border: 1px solid #130e0e; /* Optional: adds a border around the image */
+  border: 1px solid #130e0e;
 }
-
 #predict-box {
-  margin-left: 20px; /* Adds space between image and prediction box */
-  text-align: left;
+  max-width: 600px; /* Increase max-width for a larger prediction box */
+  width: 100%; /* Allow the box to be responsive */
+  padding: 30px; /* Increase padding for more internal space */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  color: white; /* White text color for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better focus */
+  text-align: left; /* Align text to the left */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  display: none; /* Hide by default */
+}
+#predict-list {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+#predict-list li {
+  margin: 15px 0; /* Increase space between items */
+  font-size: 20px; /* Increase font size for better readability */
 }
 
-#prediction {
-  font-size: 18px;
-  color: black;
+/* Optional: Style for closing the prediction box */
+#predict-box button.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* Style for the chart container */
